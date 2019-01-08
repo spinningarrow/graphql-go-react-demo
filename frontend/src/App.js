@@ -12,6 +12,7 @@ class App extends Component {
         query={graphql`
           query AppQuery {
             hello
+            data
           }
         `}
         variables={{}}
@@ -27,7 +28,7 @@ class App extends Component {
               <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>{props.hello}</p>
-                <p>{props.anotherOne ? "YES" : "NO"}</p>
+                <p>{props.data ? "YES" : "NO"}</p>
                 <a
                   className="App-link"
                   href="https://reactjs.org"
